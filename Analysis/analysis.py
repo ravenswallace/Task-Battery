@@ -32,24 +32,39 @@ with open("Tasks/taskScripts/resources/Self_Task/Self_Stimuli.csv",'r') as f:
     for e,row in enumerate(reader):
         if e == 0:
             continue
+<<<<<<< Updated upstream
         sentimentdict.update({row[6]:row[8]})
         #print(row)
+=======
+        sentimentdict[row[6]] = row[8]
+        print(row)
+>>>>>>> Stashed changes
 
 with open("Tasks/taskScripts/resources/Other_Task/Other_Stimuli.csv",'r') as f:
     reader = csv.reader(f)
     for e,row in enumerate(reader):
         if e == 0:
             continue
+<<<<<<< Updated upstream
         sentimentdict.update({row[6]:row[8]})
         #print(row)
+=======
+        sentimentdict[row[6]] = row[8]
+        print(row)
+>>>>>>> Stashed changes
 
 with open('Analysis/coords.csv','r') as ft:
     rd = csv.reader(ft)
     for e,row in enumerate(rd):
         if e == 0:
             continue
+<<<<<<< Updated upstream
         graddict.update({row[0]:[float(row[1]),float(row[2]),float(row[3])]})
         #print(row)
+=======
+        graddict[row[0]] = [float(row[1]),float(row[2]),float(row[3])]
+        print(row)
+>>>>>>> Stashed changes
 
 
 line_dict= {"Task_name":None,

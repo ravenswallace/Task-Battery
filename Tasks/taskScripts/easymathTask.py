@@ -5,6 +5,8 @@ Created on Fri Mar 30 10:36:57 2018
 @author: xw1365
 """
 
+
+import pathlib
 """
 %%% This function is for running an arithmetic (addition) task while scanning in fMRI                      %%% 
 %%% Subject's task: press the button (left / right) corresponding to the correct answer 
@@ -54,9 +56,7 @@ def parse_instructions(input_data):
     page break is #
     '''
 
-    text = re.findall(r'([^#]+)', input_data) # match any chars except for #
-
-    return text
+    return re.findall(r'([^#]+)', input_data)
 
 def load_instruction(PATH):
     '''
@@ -67,9 +67,7 @@ def load_instruction(PATH):
     with codecs.open(os.path.join(os.path.join(os.getcwd(),"resources/Maths_Task"), PATH), 'r', encoding='utf8') as f:
         input_data = f.read()
 
-    text = parse_instructions(input_data)
-
-    return text
+    return parse_instructions(input_data)
 
 class instructionsc(object):
     '''
@@ -92,7 +90,7 @@ class instructionsc(object):
 
     def show(self):
         # get instruction
-        for i, cur in enumerate(self.instruction_txt):
+        for cur in self.instruction_txt:
             self.display.setText(cur)
             self.display.draw()
             self.window.flip()
@@ -106,20 +104,17 @@ def block_generator(dfile, difficulty=1, block_num=4, trial_num=6):
     stimFile = stimFile.sample(frac=1)
 
     headers = stimFile.columns.values
-    
+
     block_data = []
     data = []
 
     for block in range(block_num):
         for trial in range(trial_num):
-            item = {}
             row = block * trial_num + trial
 
-            for col in range(len(headers)):
-                item[headers[col]] = stimFile.iat[row, col]
-            
+            item = {headers[col]: stimFile.iat[row, col] for col in range(len(headers))}
             block_data.append(item)
-        
+
         data.append(block_data)
         block_data = []
 
@@ -182,9 +177,8 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     timelimit_deci = 1.45 # equal to the choi_time 1.45 (check)
     trial_time = expr_time + choi_time + blank_time  # each trial is 3s
 
-    pretrialFixDur = 15.00;  # in seconds previous four fixation is 15s
-    posttrialFixDur = 16.00; # in seconds the final fixation is 16s
-
+    pretrialFixDur = 15.00
+    posttrialFixDur = 16.00
     instru_key     = ['return','escape']
     choie_key_list = ['left','right','escape']  # 1 == left, 2 == right
 
@@ -228,41 +222,12 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         return curr_dic
 
     # make a folder in the current directory used to store data  - correct
-    
+
 
     def shutdown ():
         win.close()
         core.quit()
 
-    # get the participants info, initialize the screen and create a data file for this subject
-    # def info_gui(expName):
-    #     # Set up a dictionary in which we can store our experiment details
-    #     expInfo={}
-    #     expInfo['expname'] =expName
-    #     # Create a string version of the current year/month/day hour/minute
-    #     expInfo['expdate']=datetime.now().strftime('%Y%m%d_%H%M')
-    #     expInfo['subjID']=['1','2']
-    #     # expInfo['subjName']=''
-        # expInfo['run']=''
-        
-        # Set up our input dialog
-        # Use the 'fixed' argument to stop the user changing the 'expname' parameter
-        # Use the 'order' argument to set the order in which to display the fields
-        #dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID'])
-        # dlg = gui.DlgFromDict(expInfo,title='input data', fixed = ['expname','expdate'],order =['expname','expdate','subjID','subjName','run'])
-
-        # if not dlg.OK:
-        #     print ('User cancelled the experiment')
-        #     core.quit()
-    
-    # creates a file with a name that is absolute path + info collected from GUI
-        # filename = data_folder + os.sep + '%s_%s_%s_%s.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
-        # filename_fixa = data_folder + os.sep + '%s_%s_%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['subjName'], expInfo['expdate'],expInfo['run'])
-        #filename = data_folder + os.sep + '%s_%s_.csv' %(expInfo['subjID'], expInfo['expdate'])
-        #filename_fixa = data_folder + os.sep + '%s_%s_fixa.csv' %(expInfo['subjID'], expInfo['expdate'])
-        
-        # stimuli_file = data
-        # return expInfo, filename,stimuli_file,filename_fixa
     # to avoid overwriting the data. Check whether the file exists, if not, create a new one and write the header.
     # Otherwise, rename it - repeat_n
     # correct
@@ -293,7 +258,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
 
             for row in reader:
                 trials.append(row)
-        
+
         # save field names as a list in order
             fieldnames = reader.fieldnames  # filenames is the first row, which used as keys of trials
 
@@ -303,20 +268,20 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # Create the log file to store the data of the experiment 
     # create the header
 
-                
+
     # def write_header(filename, header):
     #     with open (filename,'a') as csvfile:
     #         fieldnames = header
     #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
     #         data_file.writeheader()
-            
+
     #write each trial
     # def write_trial(filename,header,trial):
     #     with open (filename,'a') as csvfile:
     #         fieldnames = header
     #         data_file = csv.DictWriter(csvfile,fieldnames=fieldnames,lineterminator ='\n')
     #         data_file.writerow(trial)
-            
+
     # set up the window
     # fullscr: better timing can be achieved in full-screen mode
     # allowGUI: if set to False, window will be drawn with no frame and no buttons to close etc...
@@ -346,6 +311,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         keys = event.waitKeys(keyList =['return','escape'])
         if keys[0][0]=='escape':
             shutdown()
+
     # display instruction figure on the screen
     # def instruct(path,instruct_figure):
     #     """
@@ -360,16 +326,16 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     #     if keys[0][0]=='escape':
     #         shutdown()
     #instructions = instructionsc(window=win, instruction_txt=instr_txt)
-    
+
     def trigger_exp(path,trigger_figure):
 
-        
+
         #trigger = prep_cont(trigger_instru, instru_pos,instru_h)
         trigger = visual.ImageStim(win,image = os.path.join(path,trigger_figure),pos = instru_pos)
         trigger.draw()
         win.flip()
-        
-        
+
+
     def ready(path,ready_figure):
 
         # ready_dis = prep_cont(ready_instru,instru_pos,instru_h)
@@ -384,27 +350,27 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         trigger.draw()
         end_onset = win.flip()
         keys = event.waitKeys(keyList =['return'],timeStamped = True)
-        
+
         return end_onset
-        
-        
+
+
     # display each trial on the screen at the appropriate time
     def run_stimuli(stimuli_file, runtime):
         # read the stimuli  # re-define, not use numbers, but use keywords
-            
+
         all_trials, headers = load_conditions_dict(conditionfile=stimuli_file)
-        headers += ['i_trial_onset','trial_onset','choice_onset','blank_r_onset', 'RT', 'correct','KeyPress']   
+        headers += ['i_trial_onset','trial_onset','choice_onset','blank_r_onset', 'RT', 'correct','KeyPress']
         # open the result file to write the header
-        
+
         #write_header(filename,headers)
-        
+
         # open the fixation file     
         #f=open(filename_fixa,'a')
-        
+
         # prepare fixation and blank screen for drawing
         fixa = prep_cont('+',word_pos)
         blank = prep_cont(' ',word_pos)
-        
+
         # wait for the scanner to trigger the experiment
         # trigger_exp(curr_dic,trigger_figure)
         # event.waitKeys(keyList=['5'], timeStamped=True)
@@ -412,10 +378,10 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         #    ready(curr_dic,ready_figure)
         #    core.wait(4)  # 2 TRs
         #    win.flip() 
-    
+
 
         # write the fixation time into the fixation.csv file    
-        fixa_numth = 1  
+        fixa_numth = 1
         blockfixa_onset_abs = 0
         #f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs))
         # draw the first long fixation and flip the window 
@@ -426,16 +392,16 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
         #        
         while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
             pass
-        
+
         run_onset = win.flip()  # this is when the real experiment starts and the run starts
-        
-        
-        
-        
+
+
+
+
         timetodraw = run_onset + pretrialFixDur
         # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
         #     pass
-        
+
         count = 1 # initiaze count
         curtime = core.Clock()
         for trial in all_trials:
@@ -443,22 +409,23 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
             win.flip()
             time.sleep(2)
             if curtime.getTime() < runtime:
-                
+
                 #''' trial is a ordered dictionary. The key is the first raw of the stimuli csv file'''
                 expression = prep_cont(trial['expression'],word_pos)
-                choice = prep_cont(trial['choice'][0:4],choice_right_pos)
+                choice = prep_cont(trial['choice'][:4], choice_right_pos)
                 choice_right = prep_cont(trial['choice'][len(trial['choice'])-4::],choice_left_pos)
 
                 # display expression - the start of a new trial
                 expression.draw()
                 resultdictWriter('Math Trial Start',timer,writer)
-                ideal_trial_onset = float( pretrialFixDur) +float(run_onset) + float( trial['expr_onset'])
+                ideal_trial_onset = pretrialFixDur + float(run_onset) + float(trial['expr_onset'])
+
                 timetodraw = ideal_trial_onset
                 # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
                 #     pass
                 trial_onset = win.flip()  # when expression is displayed, this is the trial onset
-                
-                
+
+
                 # display choice and ask subjects to press the button 1 or 2
                 choice.draw()
                 choice_right.draw()
@@ -483,7 +450,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 elif type(keys) is list:
                     if keys[0][0]=='escape':
                         shutdown()
-                    
+
                     else:
                         keypress = keys[0][0]
                         RT = keys[0][1] - choice_onset  
@@ -495,11 +462,11 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                         trial['RT']=RT
                         trial['correct'] = correct
                         trial['KeyPress'] = keypress
-                        
+
                         resultdictWriter('Math Trial End',timer,writer, correct)
 
-            
-                trial['i_trial_onset'] = float( pretrialFixDur) + float( trial['expr_onset'])
+
+                trial['i_trial_onset'] = pretrialFixDur + float( trial['expr_onset'])
                 trial['trial_onset']   = trial_onset - run_onset
                 trial['choice_onset']  = choice_onset - run_onset
                 trial['RT'] = RT
@@ -507,7 +474,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 trial['KeyPress'] = keypress
 
                 resultdictWriter('Math Trial End',timer,writer, correct)
-                
+
                 # blank.draw()
                 # timetodraw = trial_onset + expr_time + choi_time       
                 # # while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
@@ -516,9 +483,9 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
 
                 # trial['blank_r_onset']=blank_r_onset - run_onset
 
-            
+
                 #write_trial(filename,headers,trial)     # calls the function that writes csv output
-                
+
         # display the long fixation after every 20 trials.
         # But at the end of all the trials, the fixation time is posttrialFixDur (16s).
         # Otherwise, it is pretrialFixDur (15s)
@@ -529,20 +496,20 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
                 #         fixa_time = pretrialFixDur
                 #     else:
                 #         fixa_time = posttrialFixDur
-                        
+
                 #     fixa.draw()
                 #     timetodraw = ideal_trial_onset + trial_time
                 #     while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
                 #         pass
-                        
+
                 #     blockfixa_onset=win.flip()
                 #     blockfixa_onset_abs = blockfixa_onset - run_onset
                 #     #f.write('%f,%.2f\n'% (fixa_numth, blockfixa_onset_abs)) 
-                    
+
                 #     timetodraw = ideal_trial_onset + trial_time + fixa_time
                 #     while core.monotonicClock.getTime() < (timetodraw - (1/120.0)):
                 #         pass
-        
+
                 count+=1 # the number-th trials that are displaying
             else:
                 return
@@ -581,27 +548,27 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
     # show the instruction
     # instruct(curr_dic,instruct_figure)
     try:
-        with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr1.txt")) as f:
-            lines1 = f.read()
-        with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr2.txt")) as f:
-            lines2 = f.read()
+        lines1 = pathlib.Path(os.path.join(os.getcwd(), "resources/Maths_Task/instr1.txt")).read_text()
+
+        lines2 = pathlib.Path(os.path.join(os.getcwd(), "resources/Maths_Task/instr2.txt")).read_text()
+
         with open(os.path.join(os.getcwd(),"resources/Maths_Task/instr3.txt")) as f:
             lines3 = f.read()
-            
+
             for i, cur in enumerate([lines1,lines2,lines3]):
                 text_inst.setText(cur)
                 text_inst.draw()
                 win.flip()
                 event.waitKeys(keyList=['return'])
 
-    except:
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr1.txt")) as f:
-            lines1 = f.read()
-        with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr2.txt")) as f:
-            lines2 = f.read()
+    except Exception:
+        lines1 = pathlib.Path(os.path.join(os.getcwd(), "taskScripts/resources/Maths_Task/instr1.txt")).read_text()
+
+        lines2 = pathlib.Path(os.path.join(os.getcwd(), "taskScripts/resources/Maths_Task/instr2.txt")).read_text()
+
         with open(os.path.join(os.getcwd(),"taskScripts/resources/Maths_Task/instr3.txt")) as f:
             lines3 = f.read()
-            
+
             for i, cur in enumerate([lines1,lines2,lines3]):
                 text_inst.setText(cur)
                 text_inst.draw()
@@ -610,7 +577,7 @@ def runexp1(timer, win, writer, resultdict, data,runtime):
 
     resultdictWriter('Math Task Start',timer,writer)
 
-            
+
     ### use 
     # Trigger the scanner
     # displays that experiment is about to start -  waiting for dummy volumes to be acquired     
