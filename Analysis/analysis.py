@@ -2,6 +2,7 @@
 import os
 import csv
 import numpy as np
+from tqdm import tqdm
 os.chdir(".")
 graddict = {}
 global sentimentdict
@@ -32,7 +33,7 @@ with open("Tasks/taskScripts/resources/Self_Task/Self_Stimuli.csv",'r') as f:
         if e == 0:
             continue
         sentimentdict.update({row[6]:row[8]})
-        print(row)
+        #print(row)
 
 with open("Tasks/taskScripts/resources/Other_Task/Other_Stimuli.csv",'r') as f:
     reader = csv.reader(f)
@@ -40,7 +41,7 @@ with open("Tasks/taskScripts/resources/Other_Task/Other_Stimuli.csv",'r') as f:
         if e == 0:
             continue
         sentimentdict.update({row[6]:row[8]})
-        print(row)
+        #print(row)
 
 with open('Analysis/coords.csv','r') as ft:
     rd = csv.reader(ft)
@@ -48,7 +49,7 @@ with open('Analysis/coords.csv','r') as ft:
         if e == 0:
             continue
         graddict.update({row[0]:[float(row[1]),float(row[2]),float(row[3])]})
-        print(row)
+        #print(row)
 
 
 line_dict= {"Task_name":None,
@@ -60,6 +61,7 @@ line_dict= {"Task_name":None,
         "Words_response":None,
         "Sounds_response":None,
         "Images_response":None,
+        # "Modality_response":None,
         "Past_response":None,
         "Distracting_response":None,
         "Focus_response":None,
@@ -94,7 +96,7 @@ def sortingfunction(exp,row,resps):
     if exp == "Experience Sampling Questions":
         # Collect response time
         
-        print(row)
+        #print(row)
         if row[3].split("_")[1] == "start":
             prevtime = float(row[1])
         elif row[3].split("_")[1] == "response":
@@ -128,11 +130,11 @@ def sortingfunction(exp,row,resps):
                     if row[9] == 'Type: NoGo':
                         resps[exp]["Accuracy - NoGo"].append(True)
         except Exception as e:
-            print(e)
+            #print(e)
             pass
         pass
     if exp == "Finger Tapping Task": #### NO RESPONSE TIME
-        print(row)
+        #print(row)
         if row[1] != "":    
             try:
                 if row[0].split(" ",2)[2] == "Trial Start":
@@ -152,7 +154,7 @@ def sortingfunction(exp,row,resps):
         # Collect response time, % correct
         pass
     if exp == "Two-Back Task-faces": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
+        #print(row)
         if row[0] == "Choice presented":
             prevtime = float(row[1])
         elif row[0] == "2-back Trial End":
@@ -168,7 +170,7 @@ def sortingfunction(exp,row,resps):
                 return 1/0
         pass
     if exp == "Two-Back Task-scenes": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
+        #print(row)
         if row[0] == "Choice presented":
             prevtime = float(row[1])
         elif row[0] == "2-back Trial End":
@@ -183,8 +185,9 @@ def sortingfunction(exp,row,resps):
             else:
                 return 1/0
         pass
+    
     if exp == "One-Back Task": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
+        #print(row)
         if row[0] == "OneBackStimulus Start":
             prevtime = float(row[1])
         elif row[0] == "OneBackStimulus End":
@@ -217,7 +220,7 @@ def sortingfunction(exp,row,resps):
         # Collect response time, % correct
         pass
     if exp == "Hard Math Task":
-        print(row)
+        #print(row)
         if row[0] == 'Choice presented':
             prevtime = float(row[1])
         elif row[0] == 'Choice made':
@@ -264,7 +267,7 @@ def sortingfunction(exp,row,resps):
         # Collect response time, % correct
         pass
     if exp == "Friend Task": #NO RESPONSE TIMES
-        print(row)
+        #print(row)
         if row[0].split('_')[0] == 'Start':
             prevtime = float(row[1])
         elif row[0].split('_')[0] == 'End':
@@ -332,7 +335,7 @@ def sortingfunction(exp,row,resps):
 
 
 
-for file in os.listdir("Tasks/log_file"):
+for file in tqdm(os.listdir("Tasks/log_file")):
     
     ftemp = file.split('.')[0]
     resps = {"Experience Sampling Questions":{"Response Time":[]},
@@ -358,6 +361,7 @@ for file in os.listdir("Tasks/log_file"):
         "Words_response":None,
         "Sounds_response":None,
         "Images_response":None,
+        # "Modality_response":None,
         "Past_response":None,
         "Distracting_response":None,
         "Focus_response":None,
@@ -410,7 +414,7 @@ for file in os.listdir("Tasks/log_file"):
                     ect = 0
                     enum =0
                 
-        print(file)
+        #print(file)
     else:
         stats = {}
         expdict = {}
@@ -445,7 +449,7 @@ for file in os.listdir("Tasks/log_file"):
                     else:
                         sortingfunction(expdict["Experiment"],row,resps)  
                     
-                print(row)
+                #print(row)
         with open("Analysis/accuracy.csv","a",newline="") as f:
             newdict = {"Subject":resps['Subject'],
              "Experience Sampling Questions Response Time":np.mean(resps['Experience Sampling Questions']['Response Time']),
@@ -460,5 +464,16 @@ for file in os.listdir("Tasks/log_file"):
              "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/len(resps['Friend Task']['Sentiment'])),
              "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/len(resps['You Task']['Sentiment']))
              }
+            # newdict = {"Subject":resps['Subject'],
+            #  "Experience Sampling Questions Response Time":np.mean(resps['Experience Sampling Questions']['Response Time']),
+            #  "GoNoGo Task Response Time":np.mean(resps['GoNoGo Task']['Response Time']), "NoGo Task Accuracy":(resps['GoNoGo Task']['Accuracy - NoGo'].count(True)/len(resps['GoNoGo Task']['Accuracy - NoGo'])), "Go Task Accuracy":(resps['GoNoGo Task']['Accuracy - Go'].count(True)/len(resps['GoNoGo Task']['Accuracy - Go'])),
+            #  "Finger Tapping Task Response Time":np.mean(resps['Finger Tapping Task']['Response Time']), "Finger Tapping Task Accuracy":(resps['Finger Tapping Task']['Accuracy'].count(True)/len(resps['Finger Tapping Task']['Accuracy'])),
+            #  "One-Back Task Response Time":np.mean(resps['One-Back Task']['Response Time']), "One-Back Task Accuracy":(resps['One-Back Task']['Accuracy'].count(True)/len(resps['One-Back Task']['Accuracy'])),
+            #  "Zero-Back Task Response Time":np.mean(resps['Zero-Back Task']['Response Time']), "Zero-Back Task Accuracy":(resps['Zero-Back Task']['Accuracy'].count(True)/len(resps['Zero-Back Task']['Accuracy'])),
+            #  "Hard Math Task Response Time":np.mean(resps['Hard Math Task']['Response Time']), "Hard Math Task Accuracy":(resps['Hard Math Task']['Accuracy'].count(True)/len(resps['Hard Math Task']['Accuracy'])),
+            #  "Easy Math Task Response Time":np.mean(resps['Easy Math Task']['Response Time']), "Easy Math Task Accuracy":(resps['Easy Math Task']['Accuracy'].count(True)/len(resps['Easy Math Task']['Accuracy'])),
+            #  "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/len(resps['Friend Task']['Sentiment'])),
+            #  "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/len(resps['You Task']['Sentiment']))
+            #  }
             writer = csv.writer(f)
             writer.writerow(newdict.values())
