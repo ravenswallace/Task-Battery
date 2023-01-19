@@ -457,8 +457,8 @@ for file in os.listdir("Tasks/log_file"):
              "Zero-Back Task Response Time":np.mean(resps['Zero-Back Task']['Response Time']), "Zero-Back Task Accuracy":(resps['Zero-Back Task']['Accuracy'].count(True)/len(resps['Zero-Back Task']['Accuracy'])),
              "Hard Math Task Response Time":np.mean(resps['Hard Math Task']['Response Time']), "Hard Math Task Accuracy":(resps['Hard Math Task']['Accuracy'].count(True)/len(resps['Hard Math Task']['Accuracy'])),
              "Easy Math Task Response Time":np.mean(resps['Easy Math Task']['Response Time']), "Easy Math Task Accuracy":(resps['Easy Math Task']['Accuracy'].count(True)/len(resps['Easy Math Task']['Accuracy'])),
-             "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/len(resps['Friend Task']['Sentiment'])),
-             "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/len(resps['You Task']['Sentiment']))
+             "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/(len(resps['Friend Task']['Sentiment']) + 1e-6)),
+             "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/(len(resps['You Task']['Sentiment']) + 1e-6))
              }
             writer = csv.writer(f)
             writer.writerow(newdict.values())
