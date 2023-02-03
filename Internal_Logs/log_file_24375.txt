@@ -1,0 +1,237 @@
+pygame 2.1.2 (SDL 2.0.18, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[387825, 'subject165']
+
+
+
+
+
+
+
+Now initializing Reading Task
+Now setting up Reading Task
+Now running Reading Task
+Now starting ESQ for Reading Task
+Now initializing Reading Task
+Now setting up Reading Task
+Now running Reading Task
+Now starting ESQ for Reading Task
+Now initializing Reading Task
+Now setting up Reading Task
+Now running Reading Task
+Now starting ESQ for Reading Task
+Now initializing Memory Task
+Now setting up Memory Task
+Now running Memory Task
+Now starting ESQ for Memory Task
+Now initializing Memory Task
+Now setting up Memory Task
+Now running Memory Task
+Now starting ESQ for Memory Task
+Now initializing Memory Task
+Now setting up Memory Task
+Now running Memory Task
+Now starting ESQ for Memory Task
+Now initializing Two-Back Task
+Now setting up Two-Back Task
+Now running Two-Back Task
+Now starting ESQ for Two-Back Task-faces
+Now initializing Two-Back Task
+Now setting up Two-Back Task
+Now running Two-Back Task
+Now starting ESQ for Two-Back Task-faces
+Now initializing Two-Back Task
+Now setting up Two-Back Task
+Now running Two-Back Task
+Now starting ESQ for Two-Back Task-scenes
+Now initializing Two-Back Task
+Now setting up Two-Back Task
+Now running Two-Back Task
+Now starting ESQ for Two-Back Task-scenes
+Now initializing GoNoGo Task
+Now setting up GoNoGo Task
+Now running GoNoGo Task
+Now starting ESQ for GoNoGo Task
+Now initializing GoNoGo Task
+Now setting up GoNoGo Task
+Now running GoNoGo Task
+Now starting ESQ for GoNoGo Task
+Now initializing GoNoGo Task
+Now setting up GoNoGo Task
+Now running GoNoGo Task
+Now starting ESQ for GoNoGo Task
+Now initializing Finger Tapping Task
+Now setting up Finger Tapping Task
+Now running Finger Tapping Task
+2.7625 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+2.7976 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+13.7808 	WARNING 	Monitor specification not found. Creating a temporary one...
+13.7865 	WARNING 	User requested fullscreen with size [1440  960], but screen is actually [2560, 1440]. Using actual size
+180.0217 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+471.4981 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+711.7711 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+822.2751 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+886.3767 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1006.5647 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+1058.7307 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1163.8567 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+1210.6521 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1318.7453 	WARNING 	Monitor specification not found. Creating a temporary one...
+1462.9539 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1577.5351 	WARNING 	Monitor specification not found. Creating a temporary one...
+1685.7982 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1771.9450 	WARNING 	Monitor specification not found. Creating a temporary one...
+1871.5463 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1959.5118 	WARNING 	Monitor specification not found. Creating a temporary one...
+2045.1181 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2292.2107 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+2296.7023 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2464.3648 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+2466.7545 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2613.2505 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+2614.8897 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2685.2567 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+Now starting ESQ for Finger Tapping Task
+Now initializing Finger Tapping Task
+Now setting up Finger Tapping Task
+Now running Finger Tapping Task
+2807.6267 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2889.9209 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+Now starting ESQ for Finger Tapping Task
+Now initializing Finger Tapping Task
+Now setting up Finger Tapping Task
+Now running Finger Tapping Task
+2987.3201 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3054.1686 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+Now starting ESQ for Finger Tapping Task
+Now initializing Easy Math Task
+Now setting up Easy Math Task
+Now running Easy Math Task
+Now starting ESQ for Easy Math Task
+Now initializing Easy Math Task
+Now setting up Easy Math Task
+Now running Easy Math Task
+Now starting ESQ for Easy Math Task
+Now initializing Easy Math Task
+Now setting up Easy Math Task
+Now running Easy Math Task
+Now starting ESQ for Easy Math Task
+Now initializing Hard Math Task
+Now setting up Hard Math Task
+Now running Hard Math Task
+Now starting ESQ for Hard Math Task
+Now initializing Hard Math Task
+Now setting up Hard Math Task
+Now running Hard Math Task
+Now starting ESQ for Hard Math Task
+Now initializing Hard Math Task
+Now setting up Hard Math Task
+Now running Hard Math Task
+Now starting ESQ for Hard Math Task
+Now initializing One-Back Task
+Now setting up One-Back Task
+Now running One-Back Task
+3128.5493 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3221.7051 	WARNING 	Monitor specification not found. Creating a temporary one...
+3307.6089 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3386.7651 	WARNING 	Monitor specification not found. Creating a temporary one...
+3485.7010 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3572.8100 	WARNING 	Monitor specification not found. Creating a temporary one...
+3643.1266 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3804.2721 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3969.0036 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4096.2883 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4175.7025 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4175.7311 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4175.7549 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4175.7789 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for One-Back Task
+Now initializing One-Back Task
+Now setting up One-Back Task
+Now running One-Back Task
+4354.0121 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4447.7733 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4447.7997 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4447.8237 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4447.8476 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for One-Back Task
+Now initializing One-Back Task
+Now setting up One-Back Task
+Now running One-Back Task
+4544.5794 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4612.7029 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4612.7295 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4612.7533 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+4612.7773 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//OneBack_Task//1back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for One-Back Task
+Now initializing Zero-Back Task
+Now setting up Zero-Back Task
+Now running Zero-Back Task
+4722.1377 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4787.8587 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4787.8857 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4787.9092 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4787.9333 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for Zero-Back Task
+Now initializing Zero-Back Task
+Now setting up Zero-Back Task
+Now running Zero-Back Task
+4911.1740 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+4993.9831 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4994.0094 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4994.0334 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+4994.0576 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for Zero-Back Task
+Now initializing Zero-Back Task
+Now setting up Zero-Back Task
+Now running Zero-Back Task
+5075.2361 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+5146.9952 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+5147.0214 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+5147.0456 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+5147.0698 	WARNING 	Requested image 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.jpg' not found but similar filename 'C:\\Users\\Smallwood Lab\\Documents\\GitHub\\Task-Battery\\Tasks\\taskScripts//resources//ZeroBack_Task//0back.png' exists. This will be used instead but changing the filename is advised.
+Now starting ESQ for Zero-Back Task
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task-Movie Task-bridge
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task-Movie Task-incept
+Now initializing Friend Task
+Now setting up Friend Task
+Now running Friend Task
+Now starting ESQ for Friend Task
+Now initializing Friend Task
+Now setting up Friend Task
+Now running Friend Task
+Now starting ESQ for Friend Task
+Now initializing Friend Task
+Now setting up Friend Task
+Now running Friend Task
+Now starting ESQ for Friend Task
+Now initializing You Task
+Now setting up You Task
+Now running You Task
+Now starting ESQ for You Task
+Now initializing You Task
+Now setting up You Task
+Now running You Task
+Now starting ESQ for You Task
+Now initializing You Task
+Now setting up You Task
+Now running You Task
+Now starting ESQ for You Task
+Success
+5214.8976 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+5431.3678 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+5528.1975 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+5682.1703 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+5773.0930 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6004.1959 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6171.1957 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6343.4813 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6501.3235 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6631.6946 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+6777.8798 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
