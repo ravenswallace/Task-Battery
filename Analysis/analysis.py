@@ -155,7 +155,7 @@ def sortingfunction(exp,row,resps):
         pass
     if exp == "Two-Back_Task-faces": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
         #print(row)
-        if row[0] == "Choice_presented":
+        if row[0] == "Choice presented":
             prevtime = float(row[1])
         elif row[0] == "2-back Trial End":
             resptime = float(row[1]) - prevtime  

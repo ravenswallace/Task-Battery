@@ -407,8 +407,8 @@ if __name__ == "__main__":
 
         movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1)
         movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2)
-        movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3)
-        movieTask4 = task(taskScripts.movieTask, datafile, 4,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 4)
+        #movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3)
+        #movieTask4 = task(taskScripts.movieTask, datafile, 4,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 4)
         # Defining task GROUPS (groups will always be shown together, preceded by an instruction screen)
         
         self_other = taskgroup([[friendTask,friendTask2,friendTask3],[youTask,youTask2,youTask3]],"resources/group_inst/self_other.txt" )
