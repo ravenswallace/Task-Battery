@@ -393,15 +393,18 @@ for file in tqdm(os.listdir("Tasks/log_file")):
                     enum +=1
                     if ect == 0:
                         task_name = row[10]
-                        if task_name == "Movie Task-Movie Task-bridge":
-                            task_name = "Movie Task-bridge"
-                        if task_name == "Movie Task-Movie Task-incept":
-                            task_name = "Movie Task-incept"
+                        
                         line_dict["Task_name"] = task_name.replace(" ","_")
                         ect = 1
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
+                        if task_name == "Movie Task-Movie Task-bridge":
+                            task_name = "Movie Task-bridge"
+                            line_dict["Task_name"] = task_name.replace(" ","_")
+                        if task_name == "Movie Task-Movie Task-incept":
+                            task_name = "Movie Task-incept"
+                            line_dict["Task_name"] = task_name.replace(" ","_")
                         grads = graddict[line_dict["Task_name"]]
                         line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"],line_dict["Gradient 4"],line_dict["Gradient 5"] = grads
                         with open("Analysis/output.csv", 'a', newline="") as outf:

@@ -2150,12 +2150,3 @@ def runexp(logfile, expClock, win, writer, resultdict, runtime,dfile,seed):
 
     run_experiment()
 
-# logfile = "C://Users//Ian//Documents//GitHub//THINCLabTestRepo//TaskFiles//log_file//testfull2.csv"
-# f = open(logfile, 'w')
-# resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None,'Response_Key':None, 'Auxillary Data': None}
-# writer = csv.DictWriter(f, fieldnames=resultdict)
-# numtrial = 10
-# runtime = 100
-# win = visual.Window(size=(1280, 800),color='white', winType='pyglet')
-# expClock = core.Clock()
-# runexp(logfile, expClock, win, writer, resultdict, numtrial, runtime)
